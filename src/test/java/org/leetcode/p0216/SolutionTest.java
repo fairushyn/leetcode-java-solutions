@@ -20,7 +20,7 @@ public class SolutionTest {
 
     private static Stream<Arguments> args() {
         return Stream.of(
-                Arguments.of(3, 7, setOf(
+                Arguments.of(1, 2, 4, setOf(
                         Arrays.asList(1, 2, 4)
                 ))
         );
@@ -29,7 +29,7 @@ public class SolutionTest {
     @ParameterizedTest
     @MethodSource("args")
     @DisplayName("CombinationSum3")
-    void test_Combine(int n, int k, Set<List<Integer>> expected) {
+    void test_CombinationSum3(int n, int k, Set<List<Integer>> expected) {
         val solution = new Solution();
         assertEquals(expected, new LinkedHashSet<>(solution.combinationSum3(n, k)));
     }
